@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltly Shop — Мощные повербанки</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: #f4f6f9; color: #1a1a1a; padding-bottom: 40px; }
+        header { background: #000; color: #fff; padding: 20px 15px; text-align: center; }
+        header h1 { font-size: 24px; color: #00e676; }
+        header p { font-size: 14px; color: #aaa; margin-top: 5px; }
+        .container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
+        .product-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        .product-image { width: 100%; height: 280px; background: #e9ecef; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; }
+        .product-info { padding: 20px; }
+        .product-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .product-price { font-size: 22px; font-weight: 800; color: #00a854; margin-bottom: 15px; }
+        .specs { list-style: none; margin-bottom: 20px; }
+        .specs li { font-size: 14px; color: #555; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+        .order-form { background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .order-form h2 { font-size: 18px; margin-bottom: 15px; text-align: center; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; outline: none; }
+        .btn-submit { width: 100%; background: #00e676; color: #000; font-weight: 700; font-size: 16px; padding: 14px; border: none; border-radius: 8px; cursor: pointer; }
+        footer { text-align: center; font-size: 12px; color: #888; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VOLTLY SHOP</h1>
+        <p>Надёжная энергия всегда под рукой</p>
+    </header>
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1609592424109-dd9892f1b177?w=800&auto=format&fit=crop" alt="Voltly PowerBank">
+            </div>
+            <div class="product-info">
+                <div class="product-title">Повербанк Voltly PowerMax 20 000 mAh</div>
+                <div class="product-price">890 грн</div>
+                <ul class="specs">
+                    <li>⚡ Емкость: 20 000 mAh</li>
+                    <li>🔌 Быстрая зарядка: Quick Charge 3.0</li>
+                    <li>📱 Выходы: 2x USB, 1x Type-C</li>
+                    <li>🛡️ Защита от перегрева</li>
+                </ul>
+            </div>
+        </div>
+        <div class="order-form">
+            <h2>Оформить заказ</h2>
+            <form action="https://formspree.io/f/xqaeovrr" method="POST">
+                <div class="form-group">
+                    <label for="name">Ваше Имя и Фамилия</label>
+                    <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+380 99 123 45 67" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Город и № отделения Новой Почты</label>
+                    <input type="text" id="city" name="city" placeholder="Киев, отделение №12" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Количество</label>
+                    <select id="quantity" name="quantity">
+                        <option value="1">1 шт. — 890 грн</option>
+                        <option value="2">2 шт. — 1690 грн</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+    <footer>© 2026 Voltly Shop</footer>
+</body>
+</html>
